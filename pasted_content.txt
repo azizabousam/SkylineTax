@@ -1,0 +1,58 @@
+You are an expert website designer and developer. A website is being built for an accountant that does tax preparation, personalized financial planning, and  tax filing assistance to maximize refunds. Here is the generic information about the company:
+"""
+Discover Our Expertise in Tax Solutions
+At Skyline Taxes, we provide comprehensive tax services tailored to meet your unique needs. Our team of experienced tax professionals is dedicated to ensuring your financial success. Explore our offerings and see how we can assist you today!
+
+Unlock Your Financial Potential with Skyline Taxes Today!
+Join us for expert tax preparation and financial planning tailored to your needs. Let our professionals guide you to success!
+
+Get Started Now
+✓ Expert guidance from certified tax professionals to maximize your returns.
+
+✓ Personalized services designed to meet your unique financial goals.
+
+May 2003
+
+Our Journey
+Skyline Taxes Services was founded with a mission to provide exceptional tax preparation and financial planning services to individuals and small businesses. Our team of experienced tax professionals is dedicated to ensuring compliance and maximizing returns for our clients.
+
+January 2020
+
+Our Growth
+In 2021, we expanded our services to include comprehensive accounting solutions, helping our clients manage their finances more effectively. This growth allowed us to serve a wider range of clients and enhance our service offerings.
+
+March 2021
+
+Our Commitment
+By 2022, Skyline Taxes Services established a reputation for reliability and excellence in the tax services industry. We remain committed to providing personalized service and expert advice to all our clients, ensuring their financial success.
+
+June 2022
+
+Our Future
+Looking ahead, we aim to innovate our services further and embrace technology to enhance client experiences. Our goal is to remain at the forefront of the tax services industry while continuing to support our clients’ financial goals.
+
+What services do you offer?
+At Skyline Taxes, we provide a comprehensive range of tax services including tax preparation, financial planning, and accounting solutions tailored to meet the needs of individuals and small businesses. Our team of experienced tax professionals is dedicated to ensuring you receive the maximum benefits while complying with all regulations.
+
+How can I schedule a consultation?
+You can easily schedule a consultation by visiting our website and using the online booking system. Alternatively, you can call our office directly to speak with one of our representatives who will assist you in finding a suitable time for your appointment.
+
+What are your fees for tax services?
+Our fees for tax services vary based on the complexity of your tax situation and the specific services required. We offer transparent pricing and will provide you with a detailed estimate after our initial consultation to ensure there are no surprises.
+
+Do you offer services for small businesses?
+Yes, we specialize in providing tax and accounting services specifically designed for small businesses. Our team understands the unique challenges faced by small business owners and is here to help you navigate your financial landscape effectively.
+
+What should I bring to my appointment?
+For your appointment, please bring all relevant financial documents, including your previous tax returns, W-2s, 1099s, and any other income or expense records. This will help us provide you with the most accurate and efficient service possible.
+
+How do you ensure my information is secure?
+We take your privacy seriously and implement strict security measures to protect your personal and financial information. Our systems are designed to comply with industry standards for data protection and confidentiality.
+""" 
+Below will be the colors used in the website:
+"""
+Primary Color: RGB(48, 101, 152)
+Secondary Color: RGS(156, 175, 201)
+Tertiary / Contrast Color: RGB(6, 186, 99)
+"""
+For booking an appointment, the user should be able to list a range of dates and times they are available for appointment and the modality of the appointment (In-Person, Phone call). We will create an admin page that will use this information to display and confirm appointments with the user but for now don't implement this page. 

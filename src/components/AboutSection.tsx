@@ -1,7 +1,3 @@
-/*
- * AboutSection — Skyline Taxes
- * Design: Two-column layout. Left: portrait image. Right: company story, timeline, values.
- */
 import { useEffect, useRef } from "react";
 import { Award, CheckCircle2 } from "lucide-react";
 

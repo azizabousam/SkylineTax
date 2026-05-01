@@ -1,7 +1,3 @@
-/*
- * FAQSection — Skyline Taxes
- * Design: Clean accordion layout on white background, primary blue accents.
- */
 import { useEffect, useRef } from "react";
 import {
   Accordion,

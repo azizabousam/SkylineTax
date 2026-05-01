@@ -1,8 +1,3 @@
-/*
- * AppointmentSection — Skyline Taxes
- * Design: Primary blue CTA background on left, clean white form card on right.
- * Enhanced form with date range, time range, and appointment modality selection.
- */
 import { useState, useRef, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -19,7 +14,7 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import { Calendar, Clock, CheckCircle2, Phone, Mail, MapPin, Radio } from "lucide-react";
+import { Calendar, Clock, CheckCircle2, Phone, Mail, MapPin } from "lucide-react";
 
 const CTA_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663605504559/6FWukh5HsU3A9vwvdw9MwV/cta-bg-accounting-REv4ietSua4ZCS8iUW4J4g.webp";
 
@@ -109,7 +104,6 @@ export default function AppointmentSection() {
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
   const onSubmit = async (data: FormData) => {
-    // Simulate API call
     await new Promise((res) => setTimeout(res, 1200));
     console.log("Appointment data:", data);
     setSubmitted(true);
@@ -121,7 +115,6 @@ export default function AppointmentSection() {
     setSelectedEndTime("");
   };
 
-  // Get today's date in YYYY-MM-DD format for min date
   const today = new Date().toISOString().split("T")[0];
 
   return (
@@ -231,8 +224,7 @@ export default function AppointmentSection() {
                 {/* Name row */}
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-1.5">
-                    <Label htmlFor="firstName" className="text-xs font-medium uppercase tracking-wider text-muted-foreground"
-                      style={{ fontFamily: "var(--font-body)" }}>
+                    <Label htmlFor="firstName" className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
                       First Name *
                     </Label>
                     <Input
@@ -240,15 +232,13 @@ export default function AppointmentSection() {
                       placeholder="John"
                       {...register("firstName")}
                       className={`h-10 text-sm ${errors.firstName ? "border-destructive" : ""}`}
-                      style={{ fontFamily: "var(--font-body)" }}
                     />
                     {errors.firstName && (
                       <p className="text-xs text-destructive">{errors.firstName.message}</p>
                     )}
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <Label htmlFor="lastName" className="text-xs font-medium uppercase tracking-wider text-muted-foreground"
-                      style={{ fontFamily: "var(--font-body)" }}>
+                    <Label htmlFor="lastName" className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
                       Last Name *
                     </Label>
                     <Input
@@ -256,7 +246,6 @@ export default function AppointmentSection() {
                       placeholder="Doe"
                       {...register("lastName")}
                       className={`h-10 text-sm ${errors.lastName ? "border-destructive" : ""}`}
-                      style={{ fontFamily: "var(--font-body)" }}
                     />
                     {errors.lastName && (
                       <p className="text-xs text-destructive">{errors.lastName.message}</p>
@@ -267,8 +256,7 @@ export default function AppointmentSection() {
                 {/* Contact row */}
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-1.5">
-                    <Label htmlFor="email" className="text-xs font-medium uppercase tracking-wider text-muted-foreground"
-                      style={{ fontFamily: "var(--font-body)" }}>
+                    <Label htmlFor="email" className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
                       Email *
                     </Label>
                     <Input
@@ -277,15 +265,13 @@ export default function AppointmentSection() {
                       placeholder="you@example.com"
                       {...register("email")}
                       className={`h-10 text-sm ${errors.email ? "border-destructive" : ""}`}
-                      style={{ fontFamily: "var(--font-body)" }}
                     />
                     {errors.email && (
                       <p className="text-xs text-destructive">{errors.email.message}</p>
                     )}
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <Label htmlFor="phone" className="text-xs font-medium uppercase tracking-wider text-muted-foreground"
-                      style={{ fontFamily: "var(--font-body)" }}>
+                    <Label htmlFor="phone" className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
                       Phone *
                     </Label>
                     <Input
@@ -294,7 +280,6 @@ export default function AppointmentSection() {
                       placeholder="+1 (555) 000-0000"
                       {...register("phone")}
                       className={`h-10 text-sm ${errors.phone ? "border-destructive" : ""}`}
-                      style={{ fontFamily: "var(--font-body)" }}
                     />
                     {errors.phone && (
                       <p className="text-xs text-destructive">{errors.phone.message}</p>
@@ -304,8 +289,7 @@ export default function AppointmentSection() {
 
                 {/* Service */}
                 <div className="flex flex-col gap-1.5">
-                  <Label className="text-xs font-medium uppercase tracking-wider text-muted-foreground"
-                    style={{ fontFamily: "var(--font-body)" }}>
+                  <Label className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
                     Service Required *
                   </Label>
                   <Select
@@ -315,15 +299,12 @@ export default function AppointmentSection() {
                       setValue("service", val, { shouldValidate: true });
                     }}
                   >
-                    <SelectTrigger className={`h-10 text-sm ${errors.service ? "border-destructive" : ""}`}
-                      style={{ fontFamily: "var(--font-body)" }}>
+                    <SelectTrigger className={`h-10 text-sm ${errors.service ? "border-destructive" : ""}`}>
                       <SelectValue placeholder="Select a service..." />
                     </SelectTrigger>
                     <SelectContent>
                       {services.map((s) => (
-                        <SelectItem key={s} value={s} style={{ fontFamily: "var(--font-body)" }}>
-                          {s}
-                        </SelectItem>
+                        <SelectItem key={s} value={s}>{s}</SelectItem>
                       ))}
                     </SelectContent>
                   </Select>
@@ -334,8 +315,7 @@ export default function AppointmentSection() {
 
                 {/* Appointment Modality */}
                 <div className="flex flex-col gap-2.5">
-                  <Label className="text-xs font-medium uppercase tracking-wider text-muted-foreground"
-                    style={{ fontFamily: "var(--font-body)" }}>
+                  <Label className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
                     Appointment Type *
                   </Label>
                   <div className="flex gap-4">
@@ -362,7 +342,7 @@ export default function AppointmentSection() {
                       >
                         <Icon className="w-4 h-4" style={{ color: selectedModality === value ? "rgb(48, 101, 152)" : "rgb(100, 110, 130)" }} />
                         <span className="text-sm font-medium"
-                          style={{ color: selectedModality === value ? "rgb(48, 101, 152)" : "rgb(100, 110, 130)", fontFamily: "var(--font-body)" }}>
+                          style={{ color: selectedModality === value ? "rgb(48, 101, 152)" : "rgb(100, 110, 130)" }}>
                           {label}
                         </span>
                       </button>
@@ -376,8 +356,7 @@ export default function AppointmentSection() {
                 {/* Date Range */}
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-1.5">
-                    <Label htmlFor="startDate" className="text-xs font-medium uppercase tracking-wider text-muted-foreground"
-                      style={{ fontFamily: "var(--font-body)" }}>
+                    <Label htmlFor="startDate" className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
                       <Calendar className="inline w-3 h-3 mr-1" />
                       Available From *
                     </Label>
@@ -387,15 +366,13 @@ export default function AppointmentSection() {
                       min={today}
                       {...register("startDate")}
                       className={`h-10 text-sm ${errors.startDate ? "border-destructive" : ""}`}
-                      style={{ fontFamily: "var(--font-body)" }}
                     />
                     {errors.startDate && (
                       <p className="text-xs text-destructive">{errors.startDate.message}</p>
                     )}
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <Label htmlFor="endDate" className="text-xs font-medium uppercase tracking-wider text-muted-foreground"
-                      style={{ fontFamily: "var(--font-body)" }}>
+                    <Label htmlFor="endDate" className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
                       Available Until *
                     </Label>
                     <Input
@@ -404,7 +381,6 @@ export default function AppointmentSection() {
                       min={today}
                       {...register("endDate")}
                       className={`h-10 text-sm ${errors.endDate ? "border-destructive" : ""}`}
-                      style={{ fontFamily: "var(--font-body)" }}
                     />
                     {errors.endDate && (
                       <p className="text-xs text-destructive">{errors.endDate.message}</p>
@@ -415,8 +391,7 @@ export default function AppointmentSection() {
                 {/* Time Range */}
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-1.5">
-                    <Label className="text-xs font-medium uppercase tracking-wider text-muted-foreground"
-                      style={{ fontFamily: "var(--font-body)" }}>
+                    <Label className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
                       <Clock className="inline w-3 h-3 mr-1" />
                       Earliest Time *
                     </Label>
@@ -427,15 +402,12 @@ export default function AppointmentSection() {
                         setValue("startTime", val, { shouldValidate: true });
                       }}
                     >
-                      <SelectTrigger className={`h-10 text-sm ${errors.startTime ? "border-destructive" : ""}`}
-                        style={{ fontFamily: "var(--font-body)" }}>
+                      <SelectTrigger className={`h-10 text-sm ${errors.startTime ? "border-destructive" : ""}`}>
                         <SelectValue placeholder="Select time..." />
                       </SelectTrigger>
                       <SelectContent>
                         {timeSlots.map((t) => (
-                          <SelectItem key={t} value={t} style={{ fontFamily: "var(--font-body)" }}>
-                            {t}
-                          </SelectItem>
+                          <SelectItem key={t} value={t}>{t}</SelectItem>
                         ))}
                       </SelectContent>
                     </Select>
@@ -444,8 +416,7 @@ export default function AppointmentSection() {
                     )}
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <Label className="text-xs font-medium uppercase tracking-wider text-muted-foreground"
-                      style={{ fontFamily: "var(--font-body)" }}>
+                    <Label className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
                       Latest Time *
                     </Label>
                     <Select
@@ -455,15 +426,12 @@ export default function AppointmentSection() {
                         setValue("endTime", val, { shouldValidate: true });
                       }}
                     >
-                      <SelectTrigger className={`h-10 text-sm ${errors.endTime ? "border-destructive" : ""}`}
-                        style={{ fontFamily: "var(--font-body)" }}>
+                      <SelectTrigger className={`h-10 text-sm ${errors.endTime ? "border-destructive" : ""}`}>
                         <SelectValue placeholder="Select time..." />
                       </SelectTrigger>
                       <SelectContent>
                         {timeSlots.map((t) => (
-                          <SelectItem key={t} value={t} style={{ fontFamily: "var(--font-body)" }}>
-                            {t}
-                          </SelectItem>
+                          <SelectItem key={t} value={t}>{t}</SelectItem>
                         ))}
                       </SelectContent>
                     </Select>
@@ -475,8 +443,7 @@ export default function AppointmentSection() {
 
                 {/* Message */}
                 <div className="flex flex-col gap-1.5">
-                  <Label htmlFor="message" className="text-xs font-medium uppercase tracking-wider text-muted-foreground"
-                    style={{ fontFamily: "var(--font-body)" }}>
+                  <Label htmlFor="message" className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
                     Additional Notes (Optional)
                   </Label>
                   <Textarea
@@ -485,7 +452,6 @@ export default function AppointmentSection() {
                     rows={3}
                     {...register("message")}
                     className="text-sm resize-none"
-                    style={{ fontFamily: "var(--font-body)" }}
                   />
                 </div>
 
@@ -514,7 +480,7 @@ export default function AppointmentSection() {
                   )}
                 </Button>
 
-                <p className="text-xs text-center text-muted-foreground" style={{ fontFamily: "var(--font-body)" }}>
+                <p className="text-xs text-center text-muted-foreground">
                   By submitting, you agree to our privacy policy. We'll never share your information.
                 </p>
               </form>

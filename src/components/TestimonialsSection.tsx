@@ -1,7 +1,3 @@
-/*
- * TestimonialsSection — Skyline Taxes
- * Design: Warm off-white background, quote-accent border, staggered card grid.
- */
 import { useEffect, useRef } from "react";
 import { Star } from "lucide-react";
 

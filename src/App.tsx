@@ -1,8 +1,3 @@
-/*
- * App — ProLedger
- * Design: Swiss Minimalism × Premium Financial Services
- * Theme: Light (warm white bg, forest green primary)
- */
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";

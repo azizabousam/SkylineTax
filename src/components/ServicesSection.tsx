@@ -1,8 +1,3 @@
-/*
- * ServicesSection — Skyline Taxes
- * Design: Staggered 3-column grid with icon cards, hover lift effect,
- * and a feature image on the right side for the main service.
- */
 import { useEffect, useRef } from "react";
 import {
   Calculator, FileText, TrendingUp, Building2,

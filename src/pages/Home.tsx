@@ -1,8 +1,3 @@
-/*
- * Home — ProLedger Landing Page
- * Design: Swiss Minimalism × Premium Financial Services
- * Sections: Navbar → Hero → TrustBar → Services → About → Testimonials → Appointment → FAQ → Footer
- */
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import TrustBar from "@/components/TrustBar";

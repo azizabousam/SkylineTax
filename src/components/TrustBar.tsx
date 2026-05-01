@@ -1,7 +1,3 @@
-/*
- * TrustBar — Skyline Taxes
- * Design: Horizontal strip with key stats, primary blue background.
- */
 import { useEffect, useRef, useState } from "react";
 
 const stats = [

@@ -1,7 +1,3 @@
-/*
- * Footer — Skyline Taxes
- * Design: Dark blue footer with primary blue accents, clean link columns.
- */
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
 
 const footerLinks = {
@@ -18,11 +14,6 @@ const footerLinks = {
 };
 
 export default function Footer() {
-  const scrollTo = (href: string) => {
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <footer id="contact" style={{ backgroundColor: "rgb(28, 28, 30)" }}>
       <div className="container py-16 lg:py-20">
@@ -72,7 +63,7 @@ export default function Footer() {
                   style={{ backgroundColor: "rgb(50, 60, 80)" }}
                   onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "rgb(48, 101, 152)")}
                   onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "rgb(50, 60, 80)")}
-                  onClick={() => {}} // placeholder
+                  onClick={() => {}}
                 >
                   <Icon className="w-3.5 h-3.5 text-white" />
                 </button>

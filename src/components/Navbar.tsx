@@ -1,7 +1,3 @@
-/*
- * Navbar — Skyline Taxes
- * Design: Minimal sticky nav, primary blue logo mark, smooth scroll links
- */
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";

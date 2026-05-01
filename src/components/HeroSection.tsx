@@ -1,8 +1,3 @@
-/*
- * HeroSection — Skyline Taxes
- * Design: Asymmetric two-column layout. Left: bold display headline + CTA.
- * Right: hero image with floating stat cards. Warm white bg.
- */
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ShieldCheck, TrendingUp, Users } from "lucide-react";

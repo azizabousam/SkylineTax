@@ -34,7 +34,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden"
+    <section id="hero" className="relative min-h-screen flex items-center pt-20 overflow-hidden"
       style={{ backgroundColor: "rgb(250, 250, 248)" }}>
 
       {/* Subtle background texture */}

@@ -21,18 +21,6 @@ export default function Footer() {
 
           {/* Brand column */}
           <div className="lg:col-span-2 flex flex-col gap-6">
-            {/* Logo */}
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-sm flex items-center justify-center"
-                style={{ backgroundColor: "rgb(48, 101, 152)" }}>
-                <span className="text-white font-bold text-sm" style={{ fontFamily: "var(--font-display)" }}>ST</span>
-              </div>
-              <span className="text-xl font-semibold tracking-tight text-white"
-                style={{ fontFamily: "var(--font-display)" }}>
-                Skyline Taxes
-              </span>
-            </div>
-
             <p className="text-sm leading-relaxed"
               style={{ color: "rgb(180, 190, 210)", fontFamily: "var(--font-body)" }}>
               Skyline Taxes Services is a full-service tax firm dedicated to delivering clarity, precision, and strategic financial guidance to individuals and small businesses of all sizes.

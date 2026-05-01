@@ -35,19 +35,10 @@ export default function Navbar() {
         {/* Logo */}
         <a
           href="#"
-          className="flex items-center gap-2.5 group"
+          className="flex items-center"
           onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
         >
-          <div className="w-8 h-8 rounded-sm flex items-center justify-center"
-            style={{ backgroundColor: "rgb(48, 101, 152)" }}>
-            <span className="text-white font-bold text-sm" style={{ fontFamily: "var(--font-display)" }}>ST</span>
-          </div>
-          <span
-            className="text-xl font-semibold tracking-tight"
-            style={{ fontFamily: "var(--font-display)", color: "rgb(48, 101, 152)" }}
-          >
-            Skyline Taxes
-          </span>
+          <img src="/logo.png" alt="Skyline Tax Accounting Service" className="h-16 lg:h-20 w-auto" />
         </a>
 
         {/* Desktop nav */}
